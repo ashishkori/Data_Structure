@@ -44,7 +44,7 @@ public class Graph{
 			b.printbsf(g,2);
 			//System.out.println();
 			DFS d=new DFS();
-			d.printdfs(g,0);
+			d.printdfs(g,2);
 		
 		}
 	

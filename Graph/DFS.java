@@ -13,6 +13,7 @@ class DFS{
 		Stack<Integer> stack=new Stack<Integer>();
 		//Stack<Integer> stack = new Stack<Integer>();
 		stack.push(start);
+		visited[start]=true;
 		while(!stack.empty())
 		{
 			int curr=stack.pop();

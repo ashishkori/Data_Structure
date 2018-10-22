@@ -2,8 +2,7 @@ import java.util.*;
 
 
 public class Graph{
-	public Graph()
-	{
+	
 		public int vertices;
 		public  LinkedList<Integer>  adj[];
 		Graph()
@@ -21,24 +20,32 @@ public class Graph{
 			
 		}
 		
-	}
+	
 	void addEdge(int v,int w)
 		{
-			adj[v].add(u);
+			adj[v].add(w);
 		}
 	public int getVertices()
-	{
-		return vertices;
-	}
-	public static void main(String [] agrs)
-	{
-		Graph g=new Graph(4);
+		{
+			return vertices;
+		}
+	public static void main(String [] args)
+		{
+			Graph g=new Graph(4);
+			
 		
-		g.addEdge(0,1);
-		g.addEdge(0,2);
-		g.addEdge(1,2);
-		g.addEdge(2,3);
-		g.addEdge(3,3);
+			g.addEdge(0, 1); 
+			g.addEdge(0, 2); 
+			g.addEdge(1, 2); 
+			g.addEdge(2, 0); 
+			g.addEdge(2, 3); 
+			g.addEdge(3, 3); 
+			BFS b=new BFS();
+			b.printbsf(g,2);
+			//System.out.println();
+			DFS d=new DFS();
+			d.printdfs(g,0);
 		
-	}
+		}
+	
 }
